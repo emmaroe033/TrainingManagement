@@ -5,15 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Training Management System</title>
   <style>
-    /* Colors inspired by Banyan: blues and neon greens */
     :root {
       --blue-dark: #004a99;
       --blue-medium: #2a75bb;
       --blue-light: #c7ddf9;
-      --green-neon: #7effa7;
+      --highlight: #4db6ff; /* softer blue */
       --text-dark: #222;
       --bg-light: #f5f9fc;
-      --shadow: rgba(0, 74, 153, 0.2);
+      --shadow: rgba(0, 74, 153, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -28,73 +31,75 @@
 
     header {
       background: var(--blue-dark);
-      padding: 1.5rem;
+      padding: 1.5rem 2rem;
       text-align: center;
       color: white;
       font-weight: 700;
-      font-size: 1.8rem;
+      font-size: 2rem;
       letter-spacing: 1px;
-      box-shadow: 0 4px 10px var(--shadow);
+      box-shadow: 0 3px 12px var(--shadow);
+      user-select: none;
     }
 
     main {
       flex-grow: 1;
-      padding: 2rem;
+      padding: 3rem 2rem;
       display: flex;
       justify-content: center;
       align-items: flex-start;
     }
 
     .modules {
-      display: flex;
-      gap: 1.8rem;
-      flex-wrap: wrap;
-      max-width: 900px;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem 3rem;
       width: 100%;
+      max-width: 1000px;
     }
 
     .module-card {
       background: white;
       border-radius: 12px;
-      box-shadow: 0 3px 12px var(--shadow);
+      box-shadow: 0 6px 18px var(--shadow);
       cursor: pointer;
-      width: 280px;
-      padding: 2rem 1.5rem;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      padding: 2.5rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      border-top: 6px solid var(--green-neon);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 3px solid transparent;
+      user-select: none;
     }
 
-    .module-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px var(--shadow);
+    .module-card:hover,
+    .module-card:focus-visible {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px var(--shadow);
+      border-color: var(--highlight);
+      outline: none;
     }
 
     .module-title {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--blue-dark);
-      margin-bottom: 0.7rem;
-      user-select: none;
+      margin-bottom: 0.8rem;
     }
 
     .module-desc {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--blue-medium);
-      line-height: 1.3;
-      user-select: none;
+      line-height: 1.4;
+      max-width: 320px;
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 400px) {
       main {
-        padding: 1rem;
+        padding: 2rem 1rem;
       }
       .module-card {
-        width: 100%;
+        padding: 2rem 1.5rem;
       }
     }
   </style>
@@ -114,6 +119,10 @@
       <div class="module-card" onclick="openModule('banyanBible.html')" tabindex="0" role="button" aria-pressed="false">
         <div class="module-title">Banyan Bible</div>
         <div class="module-desc">The full Confluence documentation and deep-dive references.</div>
+      </div>
+      <div class="module-card" onclick="openModule('questions.html')" tabindex="0" role="button" aria-pressed="false">
+        <div class="module-title">Questions</div>
+        <div class="module-desc">Common questions and answers for beginners starting out.</div>
       </div>
     </div>
   </main>
