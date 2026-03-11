@@ -3,76 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Questions — Training Management</title>
+  <title>Questions</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
     :root {
-      --blue-dark: #004a99;
-      --blue-medium: #2a75bb;
-      --highlight: #4db6ff;
-      --bg-light: #f5f9fc;
-      --text-dark: #222;
-      --shadow: rgba(0, 74, 153, 0.1);
+      --bg-dark: #121418;
+      --text-light: #e0e6f0;
+      --text-muted: #8a94a6;
+      --blue-accent: #3a9df8;
+      --green-accent: #22d7a5;
+      --shadow-dark: rgba(0, 0, 0, 0.7);
     }
+
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg-light);
-      color: var(--text-dark);
       margin: 0;
-      padding: 2rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
+
     header {
-      text-align: center;
+      background: #1c2028;
+      padding: 1.8rem 2rem;
       font-weight: 700;
-      font-size: 2rem;
-      color: var(--blue-dark);
-      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      color: var(--green-accent);
+      text-shadow: 0 0 8px var(--green-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
       user-select: none;
+      box-shadow: 0 2px 12px var(--shadow-dark);
+      text-align: center;
     }
-    ul {
-      list-style: inside disc;
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 1.5rem;
+      line-height: 1.65;
+      font-size: 1.12rem;
+    }
+
+    h1 {
+      color: var(--blue-accent);
+      font-weight: 800;
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 6px var(--blue-accent);
+      user-select: text;
+    }
+
+    dl {
+      background: #1c2028;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 0 12px rgba(0, 74, 153, 0.5);
+      max-height: 650px;
+      overflow-y: auto;
+      user-select: text;
+    }
+
+    dt {
+      font-weight: 700;
+      margin-top: 1rem;
+      color: var(--green-accent);
+      cursor: pointer;
+      user-select: text;
       font-size: 1.1rem;
-      line-height: 1.5;
+      letter-spacing: 0.03em;
     }
-    button.back-btn {
-      background: var(--highlight);
+
+    dd {
+      margin-left: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+      user-select: text;
+      font-weight: 500;
+      display: none;
+    }
+
+    nav {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    nav button {
+      background: var(--green-accent);
       border: none;
-      color: white;
+      padding: 0.8rem 1.8rem;
       font-weight: 700;
       font-size: 1rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
+      color: var(--bg-dark);
+      border-radius: 30px;
       cursor: pointer;
-      transition: background-color 0.2s ease;
-      margin-top: 2rem;
+      box-shadow: 0 0 12px var(--green-accent);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
-      display: block;
-      width: max-content;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px var(--shadow);
     }
-    button.back-btn:hover {
-      background: #2e90ff;
+
+    nav button:hover,
+    nav button:focus-visible {
+      background: #18b98c;
+      box-shadow: 0 0 20px #18b98c;
+      outline: none;
     }
   </style>
 </head>
 <body>
   <header>Questions</header>
 
-  <section>
-    <p>Here are some common questions beginners ask when starting out:</p>
-    <ul>
-      <li>What is the difference between LTL and FTL shipping?</li>
-      <li>How does Banyan connect carriers to clients?</li>
-      <li>What is a Bill of Lading (BOL)?</li>
-      <li>How do I track a shipment through Banyan’s platform?</li>
-      <li>Where can I find documentation on user permissions?</li>
-    </ul>
-  </section>
+  <main>
+    <h1>Common Questions</h1>
 
-  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
-</body>
-</html>
+    <dl>
+      <dt tabindex="0" aria-expanded="false" aria-controls="q1">What is a Carrier Load?</dt>
+      <dd id="q1">A Carrier Load is a shipment or freight that a carrier has been assigned to transport.</dd>
+
+      <dt tabindex="0" aria-expanded="false" aria-controls="q2">How do I update tracking?</dt>
+      <dd id="q2">Tracking can be updated through the Banyan platform by navigating to the specific load and entering the latest status.</dd>
+
+      <dt tabindex="0" aria-expanded="false" aria-controls="q3">What permissions are included in the default group?</dt>
+      <dd id="q3">The default permission group allows updating tracking and adding documents but excludes invoicing permissions.</dd>
+
+      <!-- Add more questions here -->
+    </dl>
+
+    <nav>
+      <button onclick="goHome()">Back to Home</button>
+    </nav>
+  </main>
+
+  <script>
+    function goHome() {
+      window.location.href = 'index.html';
+    }
+
+    // Expand/collapse Q&A for accessibility
+    const dts = document.querySelectorAll('dt');
+    dts.forEach(dt => {
+      dt.addEventListener('click', () => toggleAnswer(dt));
+      dt.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleAnswer(dt);
+        }
+      });
+    });
+
+    function toggleAnswer(dt) {
+      const expanded = dt.getAttribute('aria-expanded') === 'true';
+      dt.setAttribute('aria-expanded', !expanded
