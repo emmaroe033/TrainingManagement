@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Banyan Overview — Training Management</title>
+  <style>
+    :root {
+      --blue-dark: #004a99;
+      --blue-medium: #2a75bb;
+      --green-neon: #7effa7;
+      --bg-light: #f5f9fc;
+      --text-dark: #222;
+      --shadow: rgba(0, 74, 153, 0.2);
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 2rem 2rem 4rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--blue-dark);
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+    h2 {
+      color: var(--blue-medium);
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    button.back-btn {
+      background: var(--green-neon);
+      border: none;
+      color: var(--blue-dark);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      box-shadow: 0 3px 8px var(--shadow);
+      user-select: none;
+    }
+    button.back-btn:hover {
+      background: #56d67d;
+    }
+  </style>
+</head>
+<body>
+  <header>Banyan Overview</header>
 
+  <section>
+    <h2>What is Banyan Technology?</h2>
+    <p>Banyan Technology provides software solutions for freight shipping, primarily a Transportation Management System (TMS) that connects shippers, brokers, and 3PLs to a large network of carriers.</p>
+
+    <h2>How Banyan Works</h2>
+    <ul>
+      <li>Banyan integrates with many carriers via APIs and EDI.</li>
+      <li>Customers use Banyan to compare carrier rates, book shipments, track deliveries, and manage freight invoices.</li>
+      <li>Banyan simplifies shipping by acting as a single platform connecting clients to many carriers.</li>
+    </ul>
+
+    <h2>Who Uses Banyan?</h2>
+    <ul>
+      <li><strong>Shippers:</strong> Companies that need to transport goods, such as manufacturers and retailers.</li>
+      <li><strong>3PLs (Third-Party Logistics):</strong> Companies managing shipping for others.</li>
+      <li><strong>Freight Brokers:</strong> Intermediaries connecting shippers with carriers.</li>
+      <li><strong>Carriers:</strong> Trucking and freight companies connected to Banyan to receive load opportunities.</li>
+    </ul>
+
+    <h2>Why Clients Choose Banyan</h2>
+    <ul>
+      <li>Consolidated platform for managing multiple carriers and contracts.</li>
+      <li>Automated rate comparison and booking.</li>
+      <li>Real-time shipment tracking.</li>
+      <li>Invoice auditing and payment management.</li>
+      <li>Data and analytics to optimize shipping operations.</li>
+    </ul>
+  </section>
+
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+</body>
+</html>
