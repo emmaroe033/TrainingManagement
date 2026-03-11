@@ -1,123 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Freight 101</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freight 101</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-    :root {
-      --bg-dark: #121418;
-      --text-light: #e0e6f0;
-      --text-muted: #8a94a6;
-      --blue-accent: #3a9df8;
-      --green-accent: #22d7a5;
-      --shadow-dark: rgba(0, 0, 0, 0.7);
-    }
+:root {
+  --bg-dark: #121418;
+  --text-light: #e0e6f0;
+  --text-muted: #8a94a6;
+  --blue-accent: #3a9df8;
+  --green-accent: #22d7a5;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-    header {
-      background: #1c2028;
-      padding: 1.8rem 2rem;
-      font-weight: 700;
-      font-size: 2.2rem;
-      color: var(--green-accent);
-      text-shadow: 0 0 8px var(--green-accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      user-select: none;
-      box-shadow: 0 2px 12px var(--shadow-dark);
-      text-align: center;
-    }
+header {
+  background: #1c2028;
+  padding: 1.8rem 2rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--green-accent);
+  text-shadow: 0 0 8px var(--green-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
 
-    main {
-      flex-grow: 1;
-      max-width: 900px;
-      margin: 2rem auto 4rem;
-      padding: 0 1.5rem;
-      line-height: 1.65;
-      font-size: 1.12rem;
-    }
+main {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+  line-height: 1.65;
+  font-size: 1.12rem;
+}
 
-    h1 {
-      color: var(--blue-accent);
-      font-weight: 800;
-      font-size: 2.6rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 6px var(--blue-accent);
-      user-select: text;
-    }
+h1 {
+  color: var(--blue-accent);
+  font-weight: 800;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px var(--blue-accent);
+}
 
-    p {
-      margin-bottom: 1.2rem;
-      color: var(--text-light);
-      user-select: text;
-    }
+p, li {
+  color: var(--text-light);
+}
 
-    nav {
-      margin-top: 3rem;
-      text-align: center;
-    }
+ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
 
-    nav button {
-      background: var(--green-accent);
-      border: none;
-      padding: 0.8rem 1.8rem;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--bg-dark);
-      border-radius: 30px;
-      cursor: pointer;
-      box-shadow: 0 0 12px var(--green-accent);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      user-select: none;
-    }
+nav {
+  text-align: center;
+  margin-top: 3rem;
+}
 
-    nav button:hover,
-    nav button:focus-visible {
-      background: #18b98c;
-      box-shadow: 0 0 20px #18b98c;
-      outline: none;
-    }
-  </style>
+nav button {
+  background: var(--green-accent);
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--bg-dark);
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--green-accent);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+nav button:hover {
+  background: #18b98c;
+  box-shadow: 0 0 20px #18b98c;
+}
+</style>
 </head>
 <body>
-  <header>Freight 101</header>
+<header>Freight 101</header>
+<main>
+<h1>Freight 101: Basics for Beginners</h1>
+<p>Welcome to the Freight 101 module! Here we cover essential terms and concepts to get started in the freight and logistics industry.</p>
+<ul>
+<li><strong>Carrier:</strong> The company or individual transporting the freight.</li>
+<li><strong>Shipper:</strong> The company or person sending the goods.</li>
+<li><strong>Load:</strong> The freight or cargo to be transported.</li>
+<li><strong>Bill of Lading:</strong> Document detailing the shipment.</li>
+<li><strong>Tracking:</strong> Monitoring freight location and status.</li>
+</ul>
+<nav>
+  <button onclick="goHome()">Back to Home</button>
+</nav>
+</main>
 
-  <main>
-    <h1>Freight 101: Basics for Beginners</h1>
-    <p>Welcome to the Freight 101 module! Here we cover the essential terms and concepts to get you started in the freight and logistics industry.</p>
-
-    <p><strong>What is Freight?</strong> Freight is the transportation of goods by truck, ship, train, or aircraft.</p>
-
-    <p><strong>Key Concepts:</strong></p>
-    <ul>
-      <li><strong>Carrier:</strong> The company or individual transporting the freight.</li>
-      <li><strong>Shipper:</strong> The company or person sending the goods.</li>
-      <li><strong>Load:</strong> The freight or cargo to be transported.</li>
-      <li><strong>Bill of Lading:</strong> A document detailing the shipment.</li>
-      <li><strong>Tracking:</strong> Monitoring the freight location and status.</li>
-    </ul>
-
-    <nav>
-      <button onclick="goHome()">Back to Home</button>
-    </nav>
-  </main>
-
-  <script>
-    function goHome() {
-      window.location.href = 'index.html';
-    }
-  </script>
+<script>
+function goHome() {
+  window.location.href = 'index.html';
+}
+</script>
 </body>
 </html>
