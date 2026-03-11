@@ -139,22 +139,28 @@
   </main>
 
   <script>
-    function goHome() {
-      window.location.href = 'index.html';
+   function goHome() {
+  window.location.href = 'index.html';
+}
+
+// Expand/collapse Q&A for accessibility
+const dts = document.querySelectorAll('dt');
+dts.forEach(dt => {
+  dt.addEventListener('click', () => toggleAnswer(dt));
+  dt.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleAnswer(dt);
     }
+  });
+});
 
-    // Expand/collapse Q&A for accessibility
-    const dts = document.querySelectorAll('dt');
-    dts.forEach(dt => {
-      dt.addEventListener('click', () => toggleAnswer(dt));
-      dt.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleAnswer(dt);
-        }
-      });
-    });
-
-    function toggleAnswer(dt) {
-      const expanded = dt.getAttribute('aria-expanded') === 'true';
-      dt.setAttribute('aria-expanded', !expanded
+function toggleAnswer(dt) {
+  const expanded = dt.getAttribute('aria-expanded') === 'true';
+  dt.setAttribute('aria-expanded', !expanded);
+  const answerId = dt.getAttribute('aria-controls');
+  const answer = document.getElementById(answerId);
+  if (answer) {
+    answer.style.display = expanded ? 'none' : 'block';
+  }
+}
