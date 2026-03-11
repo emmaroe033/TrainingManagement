@@ -3,94 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Banyan Bible — Training Management</title>
+  <title>Banyan Bible</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
     :root {
-      --blue-dark: #004a99;
-      --blue-medium: #2a75bb;
-      --green-neon: #7effa7;
-      --bg-light: #f5f9fc;
-      --text-dark: #222;
-      --shadow: rgba(0, 74, 153, 0.2);
+      --bg-dark: #121418;
+      --text-light: #e0e6f0;
+      --text-muted: #8a94a6;
+      --blue-accent: #3a9df8;
+      --green-accent: #22d7a5;
+      --shadow-dark: rgba(0, 0, 0, 0.7);
     }
+
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg-light);
-      color: var(--text-dark);
       margin: 0;
-      padding: 2rem 2rem 4rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
+
     header {
+      background: #1c2028;
+      padding: 1.8rem 2rem;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: var(--green-accent);
+      text-shadow: 0 0 8px var(--green-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      user-select: none;
+      box-shadow: 0 2px 12px var(--shadow-dark);
       text-align: center;
-      font-weight: 700;
-      font-size: 2rem;
-      color: var(--blue-dark);
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 1.5rem;
+      line-height: 1.65;
+      font-size: 1.12rem;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+    }
+
+    h1 {
+      color: var(--blue-accent);
+      font-weight: 800;
+      font-size: 2.6rem;
       margin-bottom: 1rem;
-      user-select: none;
+      text-shadow: 0 0 6px var(--blue-accent);
+      user-select: text;
     }
-    section {
-      line-height: 1.5;
-    }
-    h2 {
-      color: var(--blue-medium);
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      margin-bottom: 1rem;
+
+    pre {
+      background: #1c2028;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      color: var(--text-light);
+      font-family: 'Courier New', Courier, monospace;
       font-size: 1rem;
+      overflow-x: auto;
+      max-height: 600px;
+      box-shadow: inset 0 0 15px rgba(0, 74, 153, 0.5);
+      user-select: text;
     }
-    a {
-      color: var(--green-neon);
-      text-decoration: none;
-      font-weight: 600;
+
+    nav {
+      margin-top: 3rem;
+      text-align: center;
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    button.back-btn {
-      background: var(--green-neon);
+
+    nav button {
+      background: var(--green-accent);
       border: none;
-      color: var(--blue-dark);
+      padding: 0.8rem 1.8rem;
       font-weight: 700;
       font-size: 1rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
+      color: var(--bg-dark);
+      border-radius: 30px;
       cursor: pointer;
-      transition: background-color 0.2s ease;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      box-shadow: 0 3px 8px rgba(0, 74, 153, 0.2);
+      box-shadow: 0 0 12px var(--green-accent);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
     }
-    button.back-btn:hover {
-      background: #56d67d;
+
+    nav button:hover,
+    nav button:focus-visible {
+      background: #18b98c;
+      box-shadow: 0 0 20px #18b98c;
+      outline: none;
     }
   </style>
 </head>
 <body>
   <header>Banyan Bible</header>
 
-  <section>
-    <h2>Welcome to the Banyan Reference Guide</h2>
-    <p>This section will contain detailed documentation from the Confluence knowledge base.</p>
-    <p>For now, you can:</p>
-    <ul>
-      <li>Link to exported PDF or Markdown files of the Confluence docs here.</li>
-      <li>Embed searchable documentation or AI-powered Q&A (future upgrade).</li>
-      <li>Use this space to add walkthroughs and detailed guides.</li>
-    </ul>
-    <p><em>Example placeholder links (replace with actual docs):</em></p>
-    <ul>
-      <li><a href="https://example.com/confluence-permissions.pdf" target="_blank" rel="noopener">Carrier Permissions Guide (PDF)</a></li>
-      <li><a href="https://example.com/confluence-load-management.md" target="_blank" rel="noopener">Load Management Documentation (Markdown)</a></li>
-    </ul>
-  </section>
+  <main>
+    <h1>Confluence Documentation</h1>
+    <pre>
+Paste or embed your confluence docs here...
 
-  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+Example:
+- User permissions overview
+- Carrier Loads permission group details
+- Workflow process descriptions
+- FAQs and troubleshooting tips
+
+Keep this updated as your single source of truth.
+    </pre>
+
+    <nav>
+      <button onclick="goHome()">Back to Home</button>
+    </nav>
+  </main>
+
+  <script>
+    function goHome() {
+      window.location.href = 'index.html';
+    }
+  </script>
 </body>
 </html>
