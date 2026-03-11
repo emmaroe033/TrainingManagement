@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Freight 101 — Training Management</title>
+  <style>
+    :root {
+      --blue-dark: #004a99;
+      --blue-medium: #2a75bb;
+      --green-neon: #7effa7;
+      --bg-light: #f5f9fc;
+      --text-dark: #222;
+      --shadow: rgba(0, 74, 153, 0.2);
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 2rem 2rem 4rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--blue-dark);
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+    h2 {
+      color: var(--blue-medium);
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    button.back-btn {
+      background: var(--green-neon);
+      border: none;
+      color: var(--blue-dark);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      box-shadow: 0 3px 8px var(--shadow);
+      user-select: none;
+    }
+    button.back-btn:hover {
+      background: #56d67d;
+    }
+  </style>
+</head>
+<body>
+  <header>Freight 101</header>
 
+  <section>
+    <h2>Basic Freight Terms</h2>
+    <p>Welcome to Freight 101! This module introduces key freight shipping terms.</p>
+
+    <ul>
+      <li><strong>Freight:</strong> Goods transported in bulk by truck, ship, train, or plane.</li>
+      <li><strong>Shipper:</strong> The company or person sending the freight.</li>
+      <li><strong>Carrier:</strong> The company that physically moves the freight (like trucking companies).</li>
+      <li><strong>3PL (Third-Party Logistics):</strong> Companies that manage shipping on behalf of shippers.</li>
+      <li><strong>LTL (Less Than Truckload):</strong> Freight shipments smaller than a full truckload, usually combined with other loads.</li>
+      <li><strong>FTL (Full Truckload):</strong> A shipment that fills an entire truck.</li>
+      <li><strong>Pallet:</strong> A flat transport structure that supports goods for handling and storage.</li>
+      <li><strong>Freight Class:</strong> A standardized category affecting shipping rates based on density, value, and handling.</li>
+      <li><strong>Bill of Lading (BOL):</strong> A legal document between shipper and carrier detailing shipment specifics.</li>
+      <li><strong>Tracking:</strong> Monitoring the shipment's progress until delivery.</li>
+      <li><strong>Invoice:</strong> Billing document issued after shipment delivery.</li>
+    </ul>
+  </section>
+
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+</body>
+</html>
