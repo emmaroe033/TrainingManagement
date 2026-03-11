@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Questions — Training Management</title>
+  <style>
+    :root {
+      --blue-dark: #004a99;
+      --blue-medium: #2a75bb;
+      --highlight: #4db6ff;
+      --bg-light: #f5f9fc;
+      --text-dark: #222;
+      --shadow: rgba(0, 74, 153, 0.1);
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--blue-dark);
+      margin-bottom: 2rem;
+      user-select: none;
+    }
+    ul {
+      list-style: inside disc;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    button.back-btn {
+      background: var(--highlight);
+      border: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin-top: 2rem;
+      user-select: none;
+      display: block;
+      width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+    button.back-btn:hover {
+      background: #2e90ff;
+    }
+  </style>
+</head>
+<body>
+  <header>Questions</header>
+
+  <section>
+    <p>Here are some common questions beginners ask when starting out:</p>
+    <ul>
+      <li>What is the difference between LTL and FTL shipping?</li>
+      <li>How does Banyan connect carriers to clients?</li>
+      <li>What is a Bill of Lading (BOL)?</li>
+      <li>How do I track a shipment through Banyan’s platform?</li>
+      <li>Where can I find documentation on user permissions?</li>
+    </ul>
+  </section>
+
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+</body>
+</html>
