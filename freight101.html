@@ -3,92 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Freight 101 — Training Management</title>
+  <title>Freight 101</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
     :root {
-      --blue-dark: #004a99;
-      --blue-medium: #2a75bb;
-      --green-neon: #7effa7;
-      --bg-light: #f5f9fc;
-      --text-dark: #222;
-      --shadow: rgba(0, 74, 153, 0.2);
+      --bg-dark: #121418;
+      --text-light: #e0e6f0;
+      --text-muted: #8a94a6;
+      --blue-accent: #3a9df8;
+      --green-accent: #22d7a5;
+      --shadow-dark: rgba(0, 0, 0, 0.7);
     }
+
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg-light);
-      color: var(--text-dark);
       margin: 0;
-      padding: 2rem 2rem 4rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
+
     header {
+      background: #1c2028;
+      padding: 1.8rem 2rem;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: var(--green-accent);
+      text-shadow: 0 0 8px var(--green-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      user-select: none;
+      box-shadow: 0 2px 12px var(--shadow-dark);
       text-align: center;
-      font-weight: 700;
-      font-size: 2rem;
-      color: var(--blue-dark);
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 1.5rem;
+      line-height: 1.65;
+      font-size: 1.12rem;
+    }
+
+    h1 {
+      color: var(--blue-accent);
+      font-weight: 800;
+      font-size: 2.6rem;
       margin-bottom: 1rem;
-      user-select: none;
+      text-shadow: 0 0 6px var(--blue-accent);
+      user-select: text;
     }
-    h2 {
-      color: var(--blue-medium);
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-    }
+
     p {
-      line-height: 1.5;
-      margin-bottom: 1rem;
-      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      color: var(--text-light);
+      user-select: text;
     }
-    ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1rem;
-      font-size: 1rem;
+
+    nav {
+      margin-top: 3rem;
+      text-align: center;
     }
-    button.back-btn {
-      background: var(--green-neon);
+
+    nav button {
+      background: var(--green-accent);
       border: none;
-      color: var(--blue-dark);
+      padding: 0.8rem 1.8rem;
       font-weight: 700;
       font-size: 1rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
+      color: var(--bg-dark);
+      border-radius: 30px;
       cursor: pointer;
-      transition: background-color 0.2s ease;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      box-shadow: 0 3px 8px var(--shadow);
+      box-shadow: 0 0 12px var(--green-accent);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
     }
-    button.back-btn:hover {
-      background: #56d67d;
+
+    nav button:hover,
+    nav button:focus-visible {
+      background: #18b98c;
+      box-shadow: 0 0 20px #18b98c;
+      outline: none;
     }
   </style>
 </head>
 <body>
   <header>Freight 101</header>
 
-  <section>
-    <h2>Basic Freight Terms</h2>
-    <p>Welcome to Freight 101! This module introduces key freight shipping terms.</p>
+  <main>
+    <h1>Freight 101: Basics for Beginners</h1>
+    <p>Welcome to the Freight 101 module! Here we cover the essential terms and concepts to get you started in the freight and logistics industry.</p>
 
+    <p><strong>What is Freight?</strong> Freight is the transportation of goods by truck, ship, train, or aircraft.</p>
+
+    <p><strong>Key Concepts:</strong></p>
     <ul>
-      <li><strong>Freight:</strong> Goods transported in bulk by truck, ship, train, or plane.</li>
-      <li><strong>Shipper:</strong> The company or person sending the freight.</li>
-      <li><strong>Carrier:</strong> The company that physically moves the freight (like trucking companies).</li>
-      <li><strong>3PL (Third-Party Logistics):</strong> Companies that manage shipping on behalf of shippers.</li>
-      <li><strong>LTL (Less Than Truckload):</strong> Freight shipments smaller than a full truckload, usually combined with other loads.</li>
-      <li><strong>FTL (Full Truckload):</strong> A shipment that fills an entire truck.</li>
-      <li><strong>Pallet:</strong> A flat transport structure that supports goods for handling and storage.</li>
-      <li><strong>Freight Class:</strong> A standardized category affecting shipping rates based on density, value, and handling.</li>
-      <li><strong>Bill of Lading (BOL):</strong> A legal document between shipper and carrier detailing shipment specifics.</li>
-      <li><strong>Tracking:</strong> Monitoring the shipment's progress until delivery.</li>
-      <li><strong>Invoice:</strong> Billing document issued after shipment delivery.</li>
+      <li><strong>Carrier:</strong> The company or individual transporting the freight.</li>
+      <li><strong>Shipper:</strong> The company or person sending the goods.</li>
+      <li><strong>Load:</strong> The freight or cargo to be transported.</li>
+      <li><strong>Bill of Lading:</strong> A document detailing the shipment.</li>
+      <li><strong>Tracking:</strong> Monitoring the freight location and status.</li>
     </ul>
-  </section>
 
-  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <nav>
+      <button onclick="goHome()">Back to Home</button>
+    </nav>
+  </main>
+
+  <script>
+    function goHome() {
+      window.location.href = 'index.html';
+    }
+  </script>
 </body>
 </html>
