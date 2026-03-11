@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Banyan Bible — Training Management</title>
+  <style>
+    :root {
+      --blue-dark: #004a99;
+      --blue-medium: #2a75bb;
+      --green-neon: #7effa7;
+      --bg-light: #f5f9fc;
+      --text-dark: #222;
+      --shadow: rgba(0, 74, 153, 0.2);
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 2rem 2rem 4rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--blue-dark);
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+    section {
+      line-height: 1.5;
+    }
+    h2 {
+      color: var(--blue-medium);
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    a {
+      color: var(--green-neon);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button.back-btn {
+      background: var(--green-neon);
+      border: none;
+      color: var(--blue-dark);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      box-shadow: 0 3px 8px rgba(0, 74, 153, 0.2);
+      user-select: none;
+    }
+    button.back-btn:hover {
+      background: #56d67d;
+    }
+  </style>
+</head>
+<body>
+  <header>Banyan Bible</header>
 
+  <section>
+    <h2>Welcome to the Banyan Reference Guide</h2>
+    <p>This section will contain detailed documentation from the Confluence knowledge base.</p>
+    <p>For now, you can:</p>
+    <ul>
+      <li>Link to exported PDF or Markdown files of the Confluence docs here.</li>
+      <li>Embed searchable documentation or AI-powered Q&A (future upgrade).</li>
+      <li>Use this space to add walkthroughs and detailed guides.</li>
+    </ul>
+    <p><em>Example placeholder links (replace with actual docs):</em></p>
+    <ul>
+      <li><a href="https://example.com/confluence-permissions.pdf" target="_blank" rel="noopener">Carrier Permissions Guide (PDF)</a></li>
+      <li><a href="https://example.com/confluence-load-management.md" target="_blank" rel="noopener">Load Management Documentation (Markdown)</a></li>
+    </ul>
+  </section>
+
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+</body>
+</html>
